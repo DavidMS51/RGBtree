@@ -20,7 +20,7 @@ LED_COUNT      = 6      # Number of LED pixels.
 LED_PIN        = 18      # GPIO pin connected to the pixels (must support PWM!).
 LED_FREQ_HZ    = 800000  # LED signal frequency in hertz (usually 800khz)
 LED_DMA        = 5       # DMA channel to use for generating signal (try 5)
-LED_BRIGHTNESS = 5     # Set to 0 for darkest and 255 for brightest
+LED_BRIGHTNESS = 100     # Set to 0 for darkest and 255 for brightest
 LED_INVERT     = False   # True to invert the signal (when using NPN transistor level shift)
 
 def all_leds_off():
@@ -37,8 +37,13 @@ if __name__ == '__main__':
 	# Intialize the library (must be called once before other functions).
 	led.begin()
 
+	
 	print ('Press Ctrl-C to quit.')
 	all_leds_off()
+
+ #       led.setPixelColor(1,16711935)
+#	led.show()
+#	sleep(10)
 
 	ledb = [0,0,0,0,0,0]
 	rand = random.randint(0,5)
